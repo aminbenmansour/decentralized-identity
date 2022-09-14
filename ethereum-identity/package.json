@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@3id/connect": "^0.4.1",
+    "@ceramicnetwork/3id-did-resolver": "^2.1.7",
+    "@ceramicnetwork/http-client": "^2.3.4",
+    "@ceramicstudio/idx": "^0.12.2",
+    "dids": "^3.3.0",
+    "ethers": "^5.7.1"
+  }
+}
