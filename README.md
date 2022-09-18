@@ -14,7 +14,7 @@ The "cryptographic triangle" behind standard DIDs
 
 > insert figure here
 
-The private key is the control key behinf the identifier (it could be multiple private keys in cases in multisig wallets)
+The private key is the control key behind the identifier (it could be multiple private keys in cases in multisig wallets)
 
 > inser wait a minute meme, private and public key cryptography is old
 
