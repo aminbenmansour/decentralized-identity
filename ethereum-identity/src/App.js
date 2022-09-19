@@ -1,5 +1,9 @@
 import { useState } from "react";
 
+import CeramicClient from "@ceramicnetwork/http-client"
+
+import { IDX } from '@ceramicstudio/idx'
+
 function App() {
 
   const ENDPOINT = "https://ceramic-clay.3boxlabs.com"
@@ -15,6 +19,11 @@ function App() {
     return addresses
   }
   
+  const readProfile = async () => {
+    const [address] = await connect()
+    const ceramic = new CeramicClient(ENDPOINT)
+    const idx = new IDX({ ceramic })
+  }
   return (
     <div className="App">
 
