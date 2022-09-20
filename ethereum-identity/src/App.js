@@ -59,7 +59,9 @@ function App() {
     })
 
     ceramic.setDID(did)
-    
+
+    await ceramic.did.authenticate()
+
   }
 
   return (
