@@ -3,7 +3,7 @@ import './App.css';
 import { useState } from "react";
 
 import { CeramicClient } from "@ceramicnetwork/http-client"
-import ThreeIdResolver from '@ceramicnetwork/3id-did-resolver'
+import { getResolver as get3IDResolver} from '@ceramicnetwork/3id-did-resolver'
 
 import { EthereumAuthProvider, ThreeIdConnect } from '@3id/connect'
 import { DID } from 'dids'
@@ -31,7 +31,7 @@ function App() {
 
     try {
       const data = await idx.get(
-        "basicProfile", // scheme
+        "basicProfile",
         `${address}@eip155:1`
       )
 
@@ -56,7 +56,7 @@ function App() {
     const did = new DID({
       provider: threeIdConnect.getDidProvider(),
       resolver: {
-        ...ThreeIdResolver.getResolver(ceramic)
+        ...get3IDResolver(ceramic)
       }
     })
 
