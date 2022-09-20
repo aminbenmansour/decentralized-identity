@@ -42,6 +42,26 @@ function App() {
       setLoaded(true)
     }
   }
+
+  const updateProfile = async () => {
+    const [address] = await connect()
+    const ceramic = new CeramicClient(ENDPOINT)
+    const threeIdConnect = new ThreeIdConnect()
+    const provider = new EthereumAuthProvider(window.ethereum, address)
+
+    await threeIdConnect.connect(provider)
+
+    const did = new DID({
+      provider: threeIdConnect.getDidProvider(),
+      resolver: {
+        ...ThreeIdResolver.getResolver(ceramic)
+      }
+    })
+
+    ceramic.setDID(did)
+    
+  }
+
   return (
     <div className="App">
       <button onClick={readProfile}>Read Profile</button>
