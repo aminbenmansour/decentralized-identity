@@ -59,9 +59,15 @@ function App() {
     })
 
     ceramic.setDID(did)
-
     await ceramic.did.authenticate()
 
+    const idx = new IDX({ ceramic })
+    await idx.set("basicProfile", {
+      name,
+      avatar: image
+    })
+
+    console.log("Profile updated!")
   }
 
   return (
