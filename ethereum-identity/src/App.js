@@ -1,7 +1,10 @@
 import { useState } from "react";
 
 import { CeramicClient } from "@ceramicnetwork/http-client"
+import ThreeIdResolver from '@ceramicnetwork/3id-did-resolver'
 
+import { EthereumAuthProvider, ThreeIdConnect } from '@3id/connect'
+import { DID } from 'dids'
 import { IDX } from '@ceramicstudio/idx'
 
 function App() {
