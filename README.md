@@ -1,5 +1,12 @@
 # decentralized-identity
 
+DIDs is an important building stone for the desired Self-Sovereign Identity (SSI)
+
+There are some ways to implement decentralized identities, some are more decentralized than others.
+
+This project aims to introduce how [ceramic](https://ceramic.network/) allows CRUD operations on DIDs on the ethereum network througn their permissionless nodes
+
+## Background
 Decentralized Identifiers (DIDs), a new [web standard](https://www.w3.org/TR/did-core/) is a type of globally unique identifier (URI) that does not require a centralized registration authority because **control of the identifier can be proved using cryptography**.
 
 *DIDs are the atomic building block of decentralized digital trust infrastructure.* - Book: *Self-Sovereign Identity* Chapter 8: *Decentralized Identifiers*
